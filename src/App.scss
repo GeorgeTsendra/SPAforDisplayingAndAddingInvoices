@@ -1,0 +1,311 @@
+$main-bg-color: #F1F3F6;
+$second-bg-color: #FFFFFF;
+$first-text-color: #68728A;
+$button-bg-color: #4973FF;
+$button-text-color: #FDFDFF;
+$inputs-border-color: #E3E3E3;
+$block-border-color: #ECECEC;
+// ______ resets __________________
+body{
+  height: 100vh
+}
+input:valid {
+  border-color: green;
+}
+
+input:invalid {
+  border-color: red;
+}
+ul{
+  list-style:none;
+}
+a{
+  text-decoration: none;
+}
+
+#root{
+  padding-bottom: 30px;
+  background-color: $main-bg-color;
+  .main{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .header{
+      display: flex;
+      flex-direction: row;
+      width: 80%;
+      height: 50px;
+      margin: 0 auto;
+      margin-top: 20px;
+      border-left: 3px solid #E3E5E8;
+      .header-left{
+        margin-left: 10px;
+        margin-right: 10px;
+        color: $first-text-color;
+        h1{
+          font-size: 20px
+        }
+      }
+      .header-right{
+        height: 25px;
+        width: 90%;
+        border-bottom: 2px solid #E7E9EC
+
+
+      }
+      .header-right-create{
+        width: 84%;
+      }
+    }
+    .action{
+      border: 1px solid $block-border-color;
+      display: flex;
+      flex-direction: column;
+      align-content: flex-start;
+      width: 80%;
+      margin: 0 auto;
+      margin-top: 30px;
+      background-color:$second-bg-color;
+      p{
+        width: 90%;
+        margin: 20px auto 5px auto;
+      }
+      .button-div{
+        width: 90%;
+        margin: 20px auto 12px auto;
+      button{
+        width: 10%;
+        border: none;
+        border-radius: 3px;
+        background-color: $button-bg-color;
+        color: $button-text-color;
+        padding: 12px 5px;
+      }
+    }
+
+      .actions{
+        width: 90%;
+        margin: 25px auto 0 auto;
+      }
+      .actions-form{
+        display: flex;
+        border: 1px solid #F4F4F4;
+        form{
+          width: 90%;
+          display: flex;
+          flex-direction: column;
+          margin: 18px auto;
+          .form-top{
+            width: 100%;
+            display: flex;
+
+            flex-wrap: wrap;
+
+            .forms{
+              display: flex;
+              flex-direction: column;
+              width: 50%;
+              .inputs{
+                display: flex;
+                min-height: 30px;
+                margin: 12px 0;
+                width: 80%;
+                align-items: stretch;
+
+                input{
+
+                  width: 90%;
+                  min-height: 30px;
+                  padding: 0 0 0 5px;
+                  background-color: transparent;
+                  border-right: none;
+                  border-top: 1px solid $inputs-border-color;
+                  border-bottom: 1px solid $inputs-border-color;
+                  border-left: 1px solid $inputs-border-color;
+                  border-radius:  3px 0 0 3px;
+                  color: #cecece;
+                  display: flex;
+                }
+
+                input[type="date"]::-webkit-calendar-picker-indicator {
+                  color: #000000;
+
+                  right: 10%;
+                  color: transparent;
+                  background: url(https://png.icons8.com/small/64/cccccc/calendar.png) no-repeat;
+                  background-size: cover;
+                  background-position: 50% 50%;
+                  width: 20px;
+                  height: 20px;
+
+                }
+                input[type="date"]:before{
+                color:lightgray;
+                content:attr(placeholder) ": ";
+                margin-right: 0.5em;
+                font-size: 16px;
+                }
+                input[type="date"].full:before {
+                color:black;
+                content:""!important;
+                }
+
+
+                  img{
+                  width: 10%;
+                  height: 30px;
+                  right: 11%;
+
+                  padding: 0;
+                  background-color: #FFFFFF;
+                  border-top: 1px solid $inputs-border-color;
+                  border-bottom: 1px solid $inputs-border-color;
+                  border-right: 1px solid $inputs-border-color;
+                  border-left: 1px solid $inputs-border-color;
+                  border-radius: 0 3px 3px 0;
+                  z-index: 99;
+                }
+
+                .number-button{
+                  width: 8%;
+                  min-height: 30px;
+                  margin: 0;
+                  padding: 0;
+                  background-color: #FAFAFA;
+                  border: 1px solid $inputs-border-color;
+                }
+                .data-input{
+                  border-right: 1px solid $inputs-border-color;
+                  width: 100%;
+                }
+                .numbe-input{
+                  color: #686868;
+                }
+              }
+
+            }
+          }
+          .form-bottom{
+            display: flex;
+            flex-direction: column;
+            .forms{
+              display: flex;
+              flex-direction: column;
+              width: 100%;
+              label{
+                margin: 12px 0;
+              }
+              textarea{
+
+                height: 50px;
+                border: 1px solid $inputs-border-color;
+                border-radius: 3px;
+                display: flex;
+
+
+              }
+            }
+          }
+        }
+      }
+      .actions-button{
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: flex-end;
+        a{
+          width: 10%;
+          border: none;
+        }
+        button{
+          width: 100%;
+          border: none;
+          border-radius: 3px;
+          background-color: $button-bg-color;
+          color: $button-text-color;
+          padding: 12px 5px;
+        }
+      }
+    }
+    .main-invoices-block{
+      border: 1px solid $block-border-color;
+      display: flex;
+      flex-direction: column;
+      align-content: flex-start;
+      width: 80%;
+      margin: 0 auto;
+      margin-top: 30px;
+      background-color:$second-bg-color;
+      p{
+
+        width: 90%;
+        margin: 20px auto 12px auto;
+      }
+      ul{
+        padding: 0;
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        li{
+          ul{
+            margin: 0;
+            display: flex;
+            flex-direction: row;
+            li{
+              width: 22.5%;
+              text-align: left;
+              margin: 15px auto 14px 12px
+            }
+            .functional{
+              width: 10%;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              padding-right: 10px;
+              button{
+                width: 50%;
+                margin: 0 auto;
+                background: transparent;
+                border: 1px solid $inputs-border-color;
+                height: 25px;
+                img{
+                  width: auto;
+                  height: 90%;
+                }
+              }
+            }
+          }
+          .top-ul{
+            background-color: $main-bg-color;
+            color: #848CA0;
+          }
+        }
+      }
+    }
+  }
+  .add-main{
+    height: 95vh
+  }
+
+}
+@media screen and (max-width: 768px) {
+  #root .main .action .button-div button {
+    font-size: 10px;
+  }
+  #root .main .main-invoices-block ul li ul .functional button{
+    padding: 0;
+  }
+  #root .main .main-invoices-block ul li ul li{
+    font-size: 10px;
+  }
+  #root .main .action .actions-form form .form-top .forms .inputs img{
+    width: 30px;
+  }
+  #root .main .main-invoices-block ul li ul .functional button img{
+        width: 15px;
+        height: 80%;
+  }
+
+}
